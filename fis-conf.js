@@ -44,11 +44,24 @@ fis.media('dev')
 
 // extends GLOBAL config
 fis.media('prod')
-	.match('*.js', {
-	  	optimizer: fis.plugin('uglify-js')
+	.match('*.{less,css}', {
+	  packTo: '/static/aio.css'
+	})
+	.match('*.html', {
+		optimizer: fis.plugin('html-minifier')
+	})
+	.match('/widget/**.js', {
+	  	optimizer: fis.plugin('uglify-js'),
+	  	exclude: '/widget/ui/**.js',
+	  	packTo: '/static/aio.js'
+	})
+	.match('/widget/ui/**.js', {
+		optimizer: fis.plugin('uglify-js'),
+		packTo: '/static/common.js'
 	})
 	.match('*.css', {
-	  	optimizer: fis.plugin('clean-css')
+	  	optimizer: fis.plugin('clean-css'),
+	  	packTo: '/static/aio.css'
 	})
 	.match('*.png', {
 	  	optimizer: fis.plugin('png-compressor')

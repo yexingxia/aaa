@@ -1,39 +1,63 @@
 @import url('widget/css-base/src/variable.less');
 
-.mod-hao123 {
+.wrapper {
+	display: table;
 	width: 80%;
+	height: 100%;
 	margin: 0 auto;
-	h1 {
+	text-align: center;
+}
+.mod-hao123 {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	margin: 0 auto;
+	.title {
 		color: @color-dark;
 		text-align: center;
-		padding: 50px;
+		// padding: 20px 0 30px;
 	}
-	ul {
+	.nav {
 		overflow: auto;
-		padding-bottom: 20px;
+		font-size: 0;
 	}
-	li {
+	.site {
 		width: 18.4%;
-		height: 200px;
-		margin-left: 2%;
-		float: left;
+		min-width: 210px;
+		height: 160px;
+		margin: 0.5%;
+		display: inline-block;
 		border: 1px solid @color-border;
 		border-radius: @border-radius-base;
-		background: @color-light;
-		display: table;
-		text-align: center;
-		&:first-child {
-			margin-left: 0;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		background: @color-white;
+		&:hover {
+			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+			.link {
+				transform: scale(1.05);
+			}
 		}
-		a {
+		.inner {
+			display: table;
+			table-layout: fixed; // IE8 hack for child's max-width
+			width: 100%;
+			height: 100%;
+		}
+		.link {
 			display: table-cell;
 			vertical-align: middle;
 			width: 100%;
 			height: 100%;
+			transition: transform .4s;
 		}
 		img {
-			max-width: 90%;
-			max-height: 90%;
+			display: inline-block;
+			max-width: 80%;
+			max-height: 80%;
 		}
+	}
+	.alias {
+		font-size: 24px;
+		color: #012245;
 	}
 }

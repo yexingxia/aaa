@@ -58,11 +58,11 @@ h1 {
  * 1. Add the correct display in IE.
  */
 
-// figcaption,
-// figure,
-// main { /* 1 */
-//   display: block;
-// }
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}
 
 /**
  * Add the correct margin in IE 8.
