@@ -1,6 +1,7 @@
 <!--
     @require "hao123.less"
 -->
+<!-- <img src="img/u=29700768,1252787130&fm=21&gp=0.jpg" class="blur" /> -->
 <div class="wrapper">
 	<div class="mod-hao123">
 		<div class="toolbar">

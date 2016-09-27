@@ -1,5 +1,27 @@
 @import url('widget/css-base/src/variable.less');
 
+body {
+	&:before {
+		content: "";
+		background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAADZ0lEQVQ4Ty2T224bVRhG1z7vGds5tUnapG3SJm0qwQV3vAOPwsPwAECFSlRu4AIhJKjEBRIgVYCQUKsmRKgNato0Psb2jD0znpmNbHiBpfV/3/+Jh4/eDQB1CFSiIoSAEAGpAsYorNI4F2F9ROw2aMa7xPYWzqxjxCpax4hgOB+fcHL2PeKzw/tzAnWoqYWYo1EqYI3EaIFzDuuWiPzVBSyyu8R6AytWUGqFmsAo73B0/pjp5Bjx4PAgIGCuGZibgTVgtcI4jbMxcXSdZrRD5G7hzTZWtrCqSR08o6zPP90ntIe/I6se4tPDgxCoQYKQYLTEGoE1Fu8cLrpKK7pLw+zh7SZGL2PUMlIIxpOEN8OnvBr8jJz1oZogPv78IAgFUgb0/2d6K7EuxrsrtKIdGm5/YabVClatooRhnA/oJKecdX9imr9Algkm2kR8cngvzM9U87ysws6LsBbv12lEO7Tc7gJm1CrGtNAyJpkkdMdnXIx/ZTQ6htBFWY8wNxEPvrgbtBYYq3BG4qzHuhXiaJeW38fba1h1BSvXkMqQ5SkXozMGyQnD5DfKso0kIOItssIjHn55L8zfwxiJdxZnrxDH2zT9bSK9gzWrWNVCiSWmRUZneEovOSJNj8nyMyoxxPkbZKHBJBsjHn19P1ij8dZi3TJxtEPT7xKZbbzaQKlljDaUs0B79IqL4TOy6Uuy7A1V3UW4FWp9jWSSUtZvEF99+06YZ+Zcizi+sTCLzQ5Ob2LEElo1KKoZ/fFbLoZPSfMTsmmH2awNGnx8n2GWk+WvETJHfPP4vWDsHHadVrRP7Law6hpaLONMg7IMDJLXvL08YZK/JE1PKco+MzIarT2K0pBkl5RVm2ZjDfHdj+8H77do+js03G2c2cDKq4tJVWXJKO1x3v+TSXFKll2QFz3yWRfb3EbYLZK0R1X1kLpitXUT8cMvH4RWvEfT3cGbTYxcw5o1qrpinHZ43XnOOHtBUZ5T5AOKcoSwhije53I6pCiGaJWytLSOE6uIJ398GJruNpG5uShAy/mkJJOszUXvL7qjI4IYMZn0qeoxtciJlvYoCscoPSeI9gLWcFvUsxrx/OijYPU6ivkC3H+wPKE//JvO4BmzMGA67VLXGTNG+MY6qFukk0uy4hzfKFiJ7yEqjRAD/gVFy3E1r1Bo7AAAAABJRU5ErkJggg==");
+		background-color: #D0D183;
+		background-size: cover;
+		background-position: 50%;
+		background-repeat: no-repeat;
+        position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		-webkit-filter: blur(10px); /* Chrome, Opera */
+        -moz-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+    	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+	}
+}
+
 .wrapper {
 	display: table;
 	width: 80%;
@@ -21,6 +43,7 @@
 		font-size: 0;
 	}
 	.site {
+		position: relative;
 		width: 18.4%;
 		min-width: 210px;
 		height: 160px;
@@ -30,6 +53,8 @@
 		border-radius: @border-radius-base;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 		background: @color-white;
+		background: hsla(0,0%,100%,.3);
+
 		&:hover {
 			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 3px 8px 0 rgba(0, 0, 0, 0.3);
 			.link {
@@ -66,7 +91,14 @@
 	.add-favorite,
 	.add-desktop {
 		display: inline-block;
-		padding: 5px;
+		padding: 5px 15px;
+		margin-left: 10px;
+		border-radius: @border-radius-base;
+		background: @color-blue;
+		color: @color-white;
+		&:hover {
+			background: @color-link;
+		}
 	}
 	@media (max-width: @screen-sm-min) {
 		.site {
