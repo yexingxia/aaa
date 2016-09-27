@@ -41,8 +41,8 @@ Hao123.prototype = {
 			});
 		}
 		self.$mod.on('click', '.add-favorite', function(e) {
-			const bookmarkURL = window.location.href;
-			const bookmarkTitle = document.title;
+			var bookmarkURL = window.location.href;
+			var bookmarkTitle = document.title;
 			// self.addFavorite(e, window.location.href, document.title);
 			if ('addToHomescreen' in window && addToHomescreen.isCompatible) {
 		        // Mobile browsers
@@ -66,11 +66,38 @@ Hao123.prototype = {
 		        alert('Press ' + (/Mac/i.test(navigator.userAgent) ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
 		    }
 		    return false;
-		});
+		})/*.on('click', '.add-desktop', function(e) {
+			e.preventDefault();
+			self.createShortcut("http://localhost:4000/page", "asdfasf");
+		})*/;
 	},
-	addFavorite: function(e, bookmarkURL, bookmarkTitle) {
-
-
+	createShortcut: function (sUrl,sName) {
+		// try{
+		// 	var WshShell = new ActiveXObject("WScript.Shell");
+		// 	var oUrlLink = WshShell.CreateShortcut(WshShell.SpecialFolders("Desktop") + "\\" + sName + ".url");
+		// 	oUrlLink.TargetPath = sUrl;
+		// 	oUrlLink.Save();
+		// }catch(e){
+		// 	alert("当前IE安全级别不允许操作！");
+		// }
+		// // var fso = new ActiveXObject("Scripting.FileSystemObject");
+		// var shell = new ActiveXObject("WScript.Shell");
+		// //获取桌面本地桌面地址
+		// var tagFolder = shell.SpecialFolders("Desktop");
+		// // if (!fso.FolderExists(tagFolder)) {
+		// // 	fso.CreateFolder(tagFolder);
+		// // }
+		// // if (!fso.FileExists(tagFolder + "//脚本之家.lnk")) {
+		// 	//在指定的文件夹下创建名为baidu.lnk的快捷方式
+		// 	var link = shell.CreateShortcut(tagFolder + "//脚本之家.lnk");
+		// 	//相应的描述信息
+		// 	link.Description = "脚本之家";
+		// 	//快捷方式指向的链接
+		// 	link.TargetPath = "http://www.jb51.net";
+		// 	//激活链接并且窗口最大化
+		// 	link.WindowStyle = 3;
+		// 	link.Save();
+		// // }
 	}
 };
 

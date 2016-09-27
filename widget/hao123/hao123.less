@@ -15,7 +15,6 @@
 	.title {
 		color: @color-dark;
 		text-align: center;
-		// padding: 20px 0 30px;
 	}
 	.nav {
 		overflow: auto;
@@ -59,5 +58,24 @@
 	.alias {
 		font-size: 24px;
 		color: #012245;
+	}
+	.toolbar {
+		overflow: hidden;
+		text-align: right;
+	}
+	.add-favorite,
+	.add-desktop {
+		display: inline-block;
+		padding: 5px;
+	}
+	@media (max-width: @screen-sm-min) {
+		.site {
+			min-width: 150px;
+			height: 80px;
+			margin: 1%;
+		}
+		.alias {
+			font-size: 16px;
+		}
 	}
 }
