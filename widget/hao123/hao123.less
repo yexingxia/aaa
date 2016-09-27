@@ -100,7 +100,17 @@ body {
 			background: @color-link;
 		}
 	}
-	@media (max-width: @screen-sm-min) {
+	@media (max-width: @screen-min){
+		.site {
+			min-width: 250px;
+			height: 80px;
+			margin: 1%;
+		}
+		.alias {
+			font-size: 16px;
+		}
+	}
+	@media (max-width: @screen-sm) and (min-width: @screen-min) {
 		.site {
 			min-width: 150px;
 			height: 80px;
