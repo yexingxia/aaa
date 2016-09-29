@@ -1,6 +1,7 @@
 @import url('widget/css-base/src/variable.less');
 
 body {
+	background-color: #D0D183;
 	&:before {
 		content: "";
 		background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAADZ0lEQVQ4Ty2T224bVRhG1z7vGds5tUnapG3SJm0qwQV3vAOPwsPwAECFSlRu4AIhJKjEBRIgVYCQUKsmRKgNato0Psb2jD0znpmNbHiBpfV/3/+Jh4/eDQB1CFSiIoSAEAGpAsYorNI4F2F9ROw2aMa7xPYWzqxjxCpax4hgOB+fcHL2PeKzw/tzAnWoqYWYo1EqYI3EaIFzDuuWiPzVBSyyu8R6AytWUGqFmsAo73B0/pjp5Bjx4PAgIGCuGZibgTVgtcI4jbMxcXSdZrRD5G7hzTZWtrCqSR08o6zPP90ntIe/I6se4tPDgxCoQYKQYLTEGoE1Fu8cLrpKK7pLw+zh7SZGL2PUMlIIxpOEN8OnvBr8jJz1oZogPv78IAgFUgb0/2d6K7EuxrsrtKIdGm5/YabVClatooRhnA/oJKecdX9imr9Algkm2kR8cngvzM9U87ysws6LsBbv12lEO7Tc7gJm1CrGtNAyJpkkdMdnXIx/ZTQ6htBFWY8wNxEPvrgbtBYYq3BG4qzHuhXiaJeW38fba1h1BSvXkMqQ5SkXozMGyQnD5DfKso0kIOItssIjHn55L8zfwxiJdxZnrxDH2zT9bSK9gzWrWNVCiSWmRUZneEovOSJNj8nyMyoxxPkbZKHBJBsjHn19P1ij8dZi3TJxtEPT7xKZbbzaQKlljDaUs0B79IqL4TOy6Uuy7A1V3UW4FWp9jWSSUtZvEF99+06YZ+Zcizi+sTCLzQ5Ob2LEElo1KKoZ/fFbLoZPSfMTsmmH2awNGnx8n2GWk+WvETJHfPP4vWDsHHadVrRP7Law6hpaLONMg7IMDJLXvL08YZK/JE1PKco+MzIarT2K0pBkl5RVm2ZjDfHdj+8H77do+js03G2c2cDKq4tJVWXJKO1x3v+TSXFKll2QFz3yWRfb3EbYLZK0R1X1kLpitXUT8cMvH4RWvEfT3cGbTYxcw5o1qrpinHZ43XnOOHtBUZ5T5AOKcoSwhije53I6pCiGaJWytLSOE6uIJ398GJruNpG5uShAy/mkJJOszUXvL7qjI4IYMZn0qeoxtciJlvYoCscoPSeI9gLWcFvUsxrx/OijYPU6ivkC3H+wPKE//JvO4BmzMGA67VLXGTNG+MY6qFukk0uy4hzfKFiJ7yEqjRAD/gVFy3E1r1Bo7AAAAABJRU5ErkJggg==");
@@ -29,6 +30,11 @@ body {
 	margin: 0 auto;
 	text-align: center;
 }
+@media (max-width: @screen-min){
+	.wrapper {
+		width: 100%;
+	}
+}
 .mod-hao123 {
 	display: table-cell;
 	vertical-align: middle;
@@ -39,7 +45,7 @@ body {
 		text-align: center;
 	}
 	.nav {
-		overflow: auto;
+		overflow: hidden;
 		font-size: 0;
 	}
 	.site {
@@ -63,7 +69,7 @@ body {
 		}
 		.inner {
 			display: table;
-			table-layout: fixed; // IE8 hack for child's max-width
+			// table-layout: fixed; // IE hack for child's max-width
 			width: 100%;
 			height: 100%;
 		}
@@ -76,8 +82,13 @@ body {
 		}
 		img {
 			display: inline-block;
-			max-width: 80%;
+			width: 80%;
 			max-height: 80%;
+		}
+		&.pic-text {
+			img {
+				width: 40%;
+			}
 		}
 	}
 	.alias {
@@ -102,7 +113,7 @@ body {
 	}
 	@media (max-width: @screen-min){
 		.site {
-			min-width: 250px;
+			min-width: 150px;
 			height: 80px;
 			margin: 1%;
 		}
