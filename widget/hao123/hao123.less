@@ -96,6 +96,7 @@ body {
 		color: #012245;
 	}
 	.toolbar {
+		padding-top: 10px;
 		overflow: hidden;
 		text-align: right;
 	}
@@ -110,8 +111,14 @@ body {
 		&:hover {
 			background: @color-link;
 		}
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 	@media (max-width: @screen-min){
+		.toolbar {
+			text-align: center;
+		}
 		.site {
 			min-width: 150px;
 			height: 80px;
@@ -122,7 +129,11 @@ body {
 		}
 	}
 	@media (max-width: @screen-sm) and (min-width: @screen-min) {
+		.toolbar {
+			text-align: center;
+		}
 		.site {
+			width: 30%;
 			min-width: 150px;
 			height: 80px;
 			margin: 1%;
