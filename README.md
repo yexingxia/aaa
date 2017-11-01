@@ -16,6 +16,6 @@ Navigation website for best fans.
 
     a) 确保远程环境可以接收代码：在远程环境的/home/appadmin/best123目录下安装receiver组件（[安装方法](https://github.com/fex-team/receiver)），安装完成后会生成一个receiver目录，进入receiver目录下执行`node server.js`，默认占用**8999**端口
 
-    b) 确保本地环境可以发布代码：请执行`fis3 release [media]`把编译打包后的代码发布到对应环境上。目前预设了四种media: dev-本地（可省略）；test-测试环境（10.45.10.72，需通过9090端口访问）；prod_1-线上环境1（10.8.23.151）；prod_2-线上环境1（10.8.23.152）
+    b) 确保本地环境可以发布代码：请执行`fis3 release [media]`把编译打包后的代码发布到对应环境上。目前预设了四种media: dev-本地（可省略）；test-测试环境；prod_1-线上环境1；prod_2-线上环境1
 
 FIS3进一步的细节可参考[FIS3官网](http://fis.baidu.com)
