@@ -1,0 +1,30 @@
+@import url('variable.less');
+/*------------------
+     Icon
+-------------------*/
+
+// Import the fonts
+@font-face {
+  font-family: "best iconfont";
+  src: url('@{icon-font-path}@{icon-font-name}.eot'); /* IE9*/
+  src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('@{icon-font-path}@{icon-font-name}.woff') format('woff'), /* chrome、firefox */
+  url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('@{icon-font-path}@{icon-font-name}.svg@{icon-font-svg-id}') format('svg'); /* iOS 4.1- */
+}
+
+// Catchall baseclass
+.icon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'best iconfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star               { &:before { content: "\e603"; } }
+.icon-download           { &:before { content: "\e600"; } }
